@@ -112,13 +112,4 @@ export class AppComponent implements OnChanges {
     });
     this.valuePassIntoAnotherPlayground = `${(Math.random() * 100).toFixed(0)}`;
   }
-
-  protected valuePassIntoOnPushPlayground: string = 'Initial value';
-  protected handleClickUpdateOnPushPlaygroundValue() {
-    this.actionLogsService.addLog({
-      type: ActionType.Default,
-      text: `${this.logPrefix} Change value outside onPush playground`,
-    });
-    this.valuePassIntoOnPushPlayground = `${(Math.random() * 100).toFixed(0)}`;
-  }
 }
