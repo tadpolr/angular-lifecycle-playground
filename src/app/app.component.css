@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+}
+
+.container > * {
+  border: 1px solid black;
+  padding: 16px;
+}
