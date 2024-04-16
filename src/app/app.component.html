@@ -1,5 +1,36 @@
 <div class="container">
-  <app-actionpanel></app-actionpanel>
-  <app-playground></app-playground>
-  <app-actionlogs></app-actionlogs>
+  <div class="actions">
+    <button (click)="handleClickUpdatePlaygroundValue()">
+      Update input - playground
+    </button>
+    <button (click)="handleClickUpdateNgContentValue()">
+      Update input - NgContent
+    </button>
+    <button (click)="handleClickUpdateAnotherPlaygroundValue()">
+      Update input - AnotherPlayground
+    </button>
+  </div>
+
+  <div class="playground-container">
+    <div class="sub-container">
+      <app-playground [valueFromInput]="valuePassIntoPlayground">
+        <app-contentplayground
+          [valueFromInput]="valuePassIntoNgContent"
+        ></app-contentplayground>
+      </app-playground>
+    </div>
+    <div class="sub-container">
+      <h2>Another Playground</h2>
+      <app-anotherplayground
+        [valueFromInput]="valuePassIntoAnotherPlayground"
+      ></app-anotherplayground>
+    </div>
+
+    <div class="sub-container">
+      <h2>OnPush Playground</h2>
+      <app-onpushplayground
+        [valueFromInput]="valuePassIntoOnPushPlayground"
+      ></app-onpushplayground>
+    </div>
+  </div>
 </div>

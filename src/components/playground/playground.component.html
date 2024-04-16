@@ -1,1 +1,21 @@
-<p>playground works!</p>
+<div class="wrapper">
+  <h2>Playground</h2>
+
+  <div class="container">
+    <div>Value from Input: {{ valueFromInput }}</div>
+    <div>Value in the component: {{ valueInTheComponent }}</div>
+
+    <div class="buttons">
+      <button (click)="handleClickChangeValue()">
+        Update value inside Playground
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <h3>Ng content</h3>
+    <div class="content-container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

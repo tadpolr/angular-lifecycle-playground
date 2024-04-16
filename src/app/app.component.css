@@ -1,10 +1,27 @@
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: 300px auto 300px;
+  grid-template-columns: 300px auto;
 }
 
 .container > * {
   border: 1px solid black;
   padding: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sub-container {
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.playground-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

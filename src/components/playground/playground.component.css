@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.container {
+  background: #fa9c9c;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-container {
+  background: #b8f6ac;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.container-another {
+  background: #fa9c9c;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 16px;
+}

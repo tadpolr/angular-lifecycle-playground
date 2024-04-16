@@ -1,25 +1,23 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import {
   ActionType,
   ActionlogsService,
 } from '../../injectables/actionlogs.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-playground',
+  selector: 'app-anotherplayground',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './playground.component.html',
-  styleUrl: './playground.component.css',
+  templateUrl: './anotherplayground.component.html',
+  styleUrl: './anotherplayground.component.css',
 })
-export class PlaygroundComponent {
+export class AnotherplaygroundComponent {
   @Input() public valueFromInput: string = '';
 
-  protected valueInTheComponent = 'some-value';
+  protected value: string = 'initial value';
 
-  protected valueInTheComponentSetInOnInit?: string;
-
-  private logPrefix = 'Playground';
+  private logPrefix = 'AnotherPlayground';
 
   constructor(private readonly actionLogsService: ActionlogsService) {
     this.actionLogsService.addLog({
@@ -84,6 +82,7 @@ export class PlaygroundComponent {
     });
   }
 
+  protected valueInTheComponent: string = 'Initial Value';
   protected handleClickChangeValue() {
     this.actionLogsService.addLog({
       type: ActionType.Default,

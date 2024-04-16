@@ -1,8 +1,0 @@
-<h2>Action Logs</h2>
-<div class="list-container">
-  <div *ngFor="let action of actionLogsService.actionLogs">
-    <div class="action-item" [class.lifecycle]="action.type === 'LifeCycle'">
-      {{ action.text }}
-    </div>
-  </div>
-</div>
